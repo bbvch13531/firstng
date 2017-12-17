@@ -1,0 +1,9 @@
+<div id="lang-select">
+	<div class="lang-box" *ngFor="let lang of langMetadata">
+		<img src="{{'/assets/img/' + lang.flagImgName}}">
+		<label *ngIf= "langCode === lang.code">선택됨</label>
+		<button type="button" (click)="setLangCode(lang.code)"
+		[disabled]="langCode===lang.code">{{lang.name}}</button>
+	</div>
+	<!-- 다른 언어들 -->
+</div>
